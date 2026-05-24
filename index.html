@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amul Kool Rose | Product Experience</title>
+  <meta name="description" content="Experience the refreshing, cooling sensation of Amul Kool Rose flavored milk. Scroll to explore.">
+  
+  <!-- Tailwind CSS & Config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#E91E63", // Rose Pink
+            "background-light": "#FFF0F5", // Lavender Blush
+            "background-dark": "#1A0B13", // Very Dark Pink/Black
+            surface: {
+              light: "#FFFFFF",
+              dark: "#2D1A23"
+            },
+            text: {
+              light: "#333333",
+              dark: "#F3E8EE"
+            },
+            muted: {
+              light: "#666666",
+              dark: "#A3939D"
+            }
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.75rem",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Typography & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  
+  <!-- Custom Scroll styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased">
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-container">
+      <h2 class="loader-title" style="background: linear-gradient(135deg, #fff 30%, #E91E63); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Amul Kool Rose</h2>
+      <p class="loader-subtitle">Loading product experience...</p>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-text"><span id="progress-percent">0</span>%</div>
+    </div>
+  </div>
+
+  <!-- Scroll-driven Frame Animation Section -->
+  <section class="animation-section" id="kinetic-sec">
+    <!-- Sticky container holds the Canvas element fixed while scrolling this section -->
+    <div class="sticky-container">
+      <canvas id="animation-canvas"></canvas>
+    </div>
+    
+    <!-- Floating narrative overlays that scroll up over the sticky canvas background -->
+    <div class="narrative-container">
+      <div class="narrative-slide slide-1" id="slide-1">
+        <span class="slide-tag" style="color: #E91E63;">Phase 01 / Heritage</span>
+        <h3 class="slide-title">Natural Rose Essence</h3>
+        <p class="slide-text">Infused with pure rose extract, capturing the cooling, traditional fragrance of fresh Indian rose petals.</p>
+      </div>
+      
+      <div class="narrative-slide slide-2" id="slide-2">
+        <span class="slide-tag" style="color: #E91E63;">Phase 02 / Blend</span>
+        <h3 class="slide-title">Rich &amp; Creamy Milk</h3>
+        <p class="slide-text">Crafted with high-quality toned milk from Amul's trusted dairies, delivering a velvety smooth, nutritious base.</p>
+      </div>
+      
+      <div class="narrative-slide slide-3" id="slide-3">
+        <span class="slide-tag" style="color: #E91E63;">Phase 03 / Temperature</span>
+        <h3 class="slide-title">Best Served Chilled</h3>
+        <p class="slide-text">Formulated to deliver the ultimate thirst-quenching cooling sensation. The perfect refreshing treat to beat the heat.</p>
+      </div>
+      
+      <div class="narrative-slide slide-4" id="slide-4">
+        <span class="slide-tag" style="color: #E91E63;">Phase 04 / Experience</span>
+        <h3 class="slide-title">Pure Floral Rejuvenation</h3>
+        <p class="slide-text">A delicious convergence of floral sweetness and wholesome nutrition. Rejuvenating your body and senses with every single sip.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Details Section (integrated from code.html) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-muted-light dark:text-muted-dark mb-8 flex items-center gap-2">
+      <a class="hover:text-primary transition-colors" href="#">Home</a>
+      <span class="material-icons text-sm">chevron_right</span>
+      <a class="hover:text-primary transition-colors" href="#">Beverages</a>
+      <span class="material-icons text-sm">chevron_right</span>
+      <a class="hover:text-primary transition-colors" href="#">Flavored Milk</a>
+      <span class="material-icons text-sm">chevron_right</span>
+      <span class="text-text-light dark:text-text-dark font-medium">Amul Kool Rose</span>
+    </nav>
+    
+    <!-- Hero Product Showcase Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+      <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 flex items-center justify-center shadow-sm relative overflow-hidden transition-colors duration-300">
+        <div class="absolute inset-0 bg-gradient-to-tr from-pink-100 to-transparent dark:from-pink-900/20 dark:to-transparent opacity-50"></div>
+        <img alt="Amul Kool Rose Bottle with splashes" class="relative z-10 w-full max-w-md h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJ1zIlN5Uq0CbPxpi-zpJr-wVCwf2fJTobV1vYg9WjNhjRG_Q7fwgT2WIrIYKD4187hmRWJn06422D7nqFobJOSAySywevrm0kcp76I33OIiOx8HXXnUgbtjD5zkHiROEAUu7tFKM2hRjIh60uLfJ4Gc999GhoNoaLInzNt16mUDAM0kTXYSKPnHld0sYyCHM9GUp68fszFe3DRzuOC6CoTLFlSgGO5l1EocLH6gwluEpEq4FNfuUGfr2xoOLOevFP-Q3pstDv-4C"/>
+      </div>
+      
+      <div class="flex flex-col justify-center">
+        <div class="mb-2 self-start bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold tracking-wide">
+          New Refreshing Taste
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-text-light dark:text-text-dark leading-tight">
+          Amul Kool Rose
+        </h1>
+        <p class="text-lg text-muted-light dark:text-muted-dark mb-6">
+          A delicious and refreshing milk beverage infused with the classic, aromatic flavor of Indian rose. The perfect thirst quencher for any time of the day.
+        </p>
+        <div class="flex items-end gap-4 mb-8">
+          <span class="text-3xl font-bold text-text-light dark:text-text-dark">₹25.00</span>
+          <span class="text-muted-light dark:text-muted-dark mb-1 line-through">₹30.00</span>
+        </div>
+        <div class="flex items-center gap-4 mb-8">
+          <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-surface-light dark:bg-surface-dark">
+            <button id="qty-minus" class="px-4 py-2 text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors font-semibold">-</button>
+            <input id="qty-input" class="w-16 text-center border-none bg-transparent text-text-light dark:text-text-dark focus:ring-0 p-2 m-0 h-full font-semibold" min="1" type="number" value="1"/>
+            <button id="qty-plus" class="px-4 py-2 text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors font-semibold">+</button>
+          </div>
+          <button class="flex-1 bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-pink-600 transition-colors shadow-md hover:shadow-lg flex justify-center items-center gap-2">
+            <span class="material-icons">shopping_cart</span>
+            Add to Cart
+          </button>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4 mt-4 border-t border-gray-200 dark:border-gray-800 pt-8">
+          <div class="flex items-center gap-3">
+            <div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-full text-green-600 dark:text-green-400">
+              <span class="material-icons">eco</span>
+            </div>
+            <div>
+              <p class="font-semibold text-text-light dark:text-text-dark">100% Veg</p>
+              <p class="text-xs text-muted-light dark:text-muted-dark">Green dot certified</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full text-blue-600 dark:text-blue-400">
+              <span class="material-icons">ac_unit</span>
+            </div>
+            <div>
+              <p class="font-semibold text-text-light dark:text-text-dark">Best Chilled</p>
+              <p class="text-xs text-muted-light dark:text-muted-dark">Serve cold for best taste</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Detailed Info Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      <div class="lg:col-span-2 bg-surface-light dark:bg-surface-dark rounded-2xl p-8 shadow-sm transition-colors duration-300">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-text-light dark:text-text-dark">
+          <span class="material-icons text-primary">local_florist</span>
+          The Flavor Story
+        </h2>
+        <div class="prose dark:prose-invert max-w-none text-muted-light dark:text-muted-dark">
+          <p class="mb-4">
+            Experience the nostalgic essence of traditional Indian summers with Amul Kool Rose. We've captured the delicate, sweet fragrance of indigenous roses and blended it seamlessly with rich, creamy milk.
+          </p>
+          <p class="mb-6">
+            Rose has been celebrated for centuries in Indian culinary traditions, known for its cooling properties and mood-lifting aroma. Our Rose Extract is carefully sourced to ensure that every sip delivers an authentic, soothing experience that rejuvenates your senses and brings a touch of floral elegance to your day.
+          </p>
+        </div>
+        <h3 class="text-xl font-bold mt-8 mb-4 text-text-light dark:text-text-dark">Ingredients</h3>
+        <ul class="list-disc list-inside space-y-2 text-muted-light dark:text-muted-dark marker:text-primary">
+          <li>Toned Milk (89%)</li>
+          <li>Sugar</li>
+          <li>Rose Extract (Natural Flavoring)</li>
+          <li>Permitted Stabilizers (E407)</li>
+          <li>Contains added natural and nature-identical flavoring substances.</li>
+        </ul>
+      </div>
+      
+      <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-800 transition-colors duration-300">
+        <h2 class="text-2xl font-bold mb-6 text-center text-text-light dark:text-text-dark border-b border-gray-200 dark:border-gray-700 pb-4">
+          Nutrition Facts
+        </h2>
+        <p class="text-sm text-center text-muted-light dark:text-muted-dark mb-4">Amount per 100ml</p>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800">
+            <span class="font-medium text-text-light dark:text-text-dark">Energy</span>
+            <span class="font-bold text-text-light dark:text-text-dark">85 kcal</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800">
+            <span class="font-medium text-text-light dark:text-text-dark">Total Fat</span>
+            <span class="font-bold text-text-light dark:text-text-dark">3.0 g</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800 pl-4">
+            <span class="text-sm text-muted-light dark:text-muted-dark">Saturated Fat</span>
+            <span class="text-sm text-muted-light dark:text-muted-dark">2.0 g</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800">
+            <span class="font-medium text-text-light dark:text-text-dark">Total Carbohydrates</span>
+            <span class="font-bold text-text-light dark:text-text-dark">11.5 g</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800 pl-4">
+            <span class="text-sm text-muted-light dark:text-muted-dark">Added Sugar</span>
+            <span class="text-sm text-muted-light dark:text-muted-dark">8.0 g</span>
+          </div>
+          <div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800">
+            <span class="font-medium text-text-light dark:text-text-dark">Protein</span>
+            <span class="font-bold text-text-light dark:text-text-dark">3.0 g</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <span class="font-medium text-text-light dark:text-text-dark">Calcium</span>
+            <span class="font-bold text-text-light dark:text-text-dark">120 mg</span>
+          </div>
+        </div>
+        <div class="mt-6 text-xs text-muted-light dark:text-muted-dark text-center">
+          *Approximate Values.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (integrated from code.html) -->
+  <footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 py-8 transition-colors duration-300 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-muted-light dark:text-muted-dark text-sm">
+        &copy; 2026 Amul. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Configuration
+      const totalFrames = 240;
+      const frameFolder = 'ezgif-6b540c581b91add2-jpg 2';
+      const framePrefix = 'ezgif-frame-';
+      const frameExtension = '.jpg';
+      
+      // DOM Elements
+      const preloader = document.getElementById('preloader');
+      const progressFill = document.getElementById('progress-fill');
+      const progressPercent = document.getElementById('progress-percent');
+      
+      const canvas = document.getElementById('animation-canvas');
+      const ctx = canvas.getContext('2d');
+      const animationSection = document.getElementById('kinetic-sec');
+      
+      const slides = [
+        { el: document.getElementById('slide-1'), start: 0.15, end: 0.32 },
+        { el: document.getElementById('slide-2'), start: 0.38, end: 0.55 },
+        { el: document.getElementById('slide-3'), start: 0.60, end: 0.77 },
+        { el: document.getElementById('slide-4'), start: 0.82, end: 0.96 }
+      ];
+      
+      // State Variables
+      const images = [];
+      let loadedCount = 0;
+      
+      // Scroll state
+      let targetProgress = 0;
+      let currentProgress = 0;
+      const ease = 0.08; // kinetic easing speed (lower = smoother/slower)
+      
+      // Generate frame filename paths
+      function getFrameUrl(index) {
+        const frameNum = String(index).padStart(3, '0');
+        return `${frameFolder}/${framePrefix}${frameNum}${frameExtension}`;
+      }
+      
+      // Preload all frames
+      function preloadImages() {
+        return new Promise((resolve) => {
+          for (let i = 1; i <= totalFrames; i++) {
+            const img = new Image();
+            img.src = getFrameUrl(i);
+            img.onload = () => {
+              loadedCount++;
+              const percent = Math.floor((loadedCount / totalFrames) * 100);
+              progressFill.style.width = `${percent}%`;
+              progressPercent.textContent = percent;
+              
+              if (loadedCount === totalFrames) {
+                setTimeout(() => {
+                  preloader.style.opacity = '0';
+                  preloader.style.visibility = 'hidden';
+                  resolve();
+                }, 500); // Small timeout for visual smoothness
+              }
+            };
+            img.onerror = () => {
+              // Gracefully handle load error to not break the load screen
+              loadedCount++;
+              if (loadedCount === totalFrames) {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                resolve();
+              }
+            };
+            images.push(img);
+          }
+        });
+      }
+      
+      // Resize canvas to fill the layout, accounting for retina displays
+      function resizeCanvas() {
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = canvas.clientWidth * dpr;
+        canvas.height = canvas.clientHeight * dpr;
+        
+        // Draw the frame matching the current progress ratio
+        if (images.length === totalFrames && loadedCount === totalFrames) {
+          const frameIndex = Math.min(totalFrames - 1, Math.floor(currentProgress * totalFrames));
+          drawFrame(frameIndex);
+        }
+      }
+      
+      // Draw image frame using "object-fit: cover" equivalent calculations
+      function drawFrame(index) {
+        const img = images[index];
+        if (!img || !img.complete) return;
+        
+        const imgRatio = img.width / img.height;
+        const canvasRatio = canvas.width / canvas.height;
+        
+        let drawWidth, drawHeight, offsetX, offsetY;
+        
+        if (imgRatio > canvasRatio) {
+          drawHeight = canvas.height;
+          drawWidth = drawHeight * imgRatio;
+          offsetX = (canvas.width - drawWidth) / 2;
+          offsetY = 0;
+        } else {
+          drawWidth = canvas.width;
+          drawHeight = drawWidth / imgRatio;
+          offsetX = 0;
+          offsetY = (canvas.height - drawHeight) / 2;
+        }
+        
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+      }
+      
+      // Update target progress based on scroll position
+      function updateScrollProgress() {
+        const rect = animationSection.getBoundingClientRect();
+        const totalScrollable = rect.height - window.innerHeight;
+        
+        if (totalScrollable <= 0) return;
+        
+        // Calculated relative scroll position inside the animation container
+        let progress = -rect.top / totalScrollable;
+        targetProgress = Math.max(0, Math.min(1, progress));
+      }
+      
+      // Main Animation Loop running via requestAnimationFrame
+      function tick() {
+        // Interpolate progress towards target for smooth easing effect
+        currentProgress += (targetProgress - currentProgress) * ease;
+        
+        // Check difference, and render if significant
+        const frameIndex = Math.min(totalFrames - 1, Math.floor(currentProgress * totalFrames));
+        drawFrame(frameIndex);
+        
+        // Update narrative slide triggers
+        slides.forEach(slide => {
+          if (currentProgress >= slide.start && currentProgress <= slide.end) {
+            slide.el.classList.add('active');
+          } else {
+            slide.el.classList.remove('active');
+          }
+        });
+        
+        requestAnimationFrame(tick);
+      }
+      
+      // Start flow
+      preloadImages().then(() => {
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('scroll', updateScrollProgress);
+        
+        // Initialize values
+        updateScrollProgress();
+        currentProgress = targetProgress; // avoid jump at start
+        
+        // Launch loop
+        requestAnimationFrame(tick);
+      });
+
+      // Quantity selector interactivity
+      const qtyInput = document.getElementById('qty-input');
+      const qtyMinus = document.getElementById('qty-minus');
+      const qtyPlus = document.getElementById('qty-plus');
+      
+      if (qtyInput && qtyMinus && qtyPlus) {
+        qtyMinus.addEventListener('click', () => {
+          const currentVal = parseInt(qtyInput.value) || 1;
+          if (currentVal > 1) {
+            qtyInput.value = currentVal - 1;
+          }
+        });
+        qtyPlus.addEventListener('click', () => {
+          const currentVal = parseInt(qtyInput.value) || 1;
+          qtyInput.value = currentVal + 1;
+        });
+      }
+    });
+  </script>
+</body>
+</html>
